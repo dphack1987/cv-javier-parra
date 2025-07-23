@@ -22,6 +22,9 @@
             --color-light-grey: #f4f4f4; /* Fondo claro */
             --color-white: #ffffff;
             --color-accent-blue: #007bff; /* Un azul sutil para detalles */
+            --menu-bg-color: var(--color-light-grey); /* Fondo del menú */
+            --menu-link-color: var(--color-secondary-dark); /* Color de los enlaces del menú */
+            --menu-link-hover-color: var(--color-primary-red); /* Color al pasar el mouse */
         }
 
         /* Estilos generales del cuerpo */
@@ -66,11 +69,11 @@
 
         header h2 {
             /* AJUSTES PARA EVITAR EL CORTE DE TEXTO Y MANTENER PROTAGONISMO */
-            font-size: 2.5em; /* Ligeramente más pequeño para mejor ajuste */
+            font-size: 2.4em; /* Un poco más pequeño como base */
             margin: 15px 0 0; /* Más separación de H1 */
             font-weight: 900; /* ¡MUCHO MÁS NEGRITA! */
             text-transform: uppercase; /* Aseguramos mayúsculas */
-            letter-spacing: 0.8px; /* Reducción sutil del espacio entre letras */
+            letter-spacing: 0.6px; /* Reducción sutil del espacio entre letras */
             position: relative;
             z-index: 2;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
@@ -90,6 +93,30 @@
             filter: grayscale(100%) brightness(200%); /* Filtro para que se vea como marca de agua */
         }
 
+        /* Menú de navegación */
+        nav {
+            background-color: var(--menu-bg-color);
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            position: sticky; /* Fija el menú en la parte superior al hacer scroll */
+            top: 0;
+            z-index: 10; /* Asegura que esté por encima de otros elementos */
+        }
+
+        nav a {
+            color: var(--menu-link-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--menu-link-hover-color);
+        }
+
         /* Sección del candidato (foto y presentación) */
         .candidate-section {
             display: flex;
@@ -100,7 +127,7 @@
             background-color: var(--color-white);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
             border-radius: 15px;
-            margin-top: -80px; /* Eleva la sección para superponerla al header */
+            margin-top: -40px; /* Reduce la superposición debido al menú sticky */
             position: relative;
             z-index: 3;
             animation: fadeIn 1s ease-out; /* Animación de entrada suave */
@@ -252,10 +279,20 @@
         }
 
         /* Media Queries para Responsividad */
+        @media (max-width: 1024px) {
+            header h2 {
+                font-size: 2.2em;
+                letter-spacing: 0.4px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+        }
+
         @media (max-width: 992px) {
             .candidate-section {
                 flex-direction: column;
-                margin-top: -50px;
+                margin-top: -30px; /* Ajuste para el menú */
             }
             .candidate-photo {
                 padding-bottom: 10px;
@@ -271,10 +308,12 @@
                 left: 50%;
                 transform: translateX(-50%); /* Centra la línea bajo el título */
             }
-            /* Ajuste específico para header h2 en pantallas medianas */
             header h2 {
-                font-size: 2.2em;
-                letter-spacing: 0.5px;
+                font-size: 2em;
+                letter-spacing: 0.2px;
+            }
+            nav a {
+                font-size: 1em;
             }
         }
 
@@ -283,11 +322,11 @@
                 font-size: 2.8em;
             }
             header h2 { /* Ajuste para móviles, sigue siendo protagonista pero escala */
-                font-size: 1.8em; /* Más pequeño para que quepa bien */
-                letter-spacing: 0.2px; /* Reducción de espacio para el ajuste */
+                font-size: 1.6em; /* Más pequeño para que quepa bien */
+                letter-spacing: 0.1px; /* Reducción de espacio para el ajuste */
             }
             .candidate-section {
-                margin-top: -40px;
+                margin-top: -20px; /* Ajuste para el menú */
                 padding: 20px;
                 border-radius: 10px;
             }
@@ -325,6 +364,12 @@
             .footer-logo {
                 max-width: 120px;
             }
+            nav {
+                padding: 10px 0;
+            }
+            nav a {
+                margin: 0 8px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -334,7 +379,7 @@
             }
             header h2 { /* Ajuste más pequeño para los móviles más pequeños */
                 font-size: 1.3em; /* Para asegurar que quepa en casi cualquier móvil */
-                letter-spacing: 0.1px; /* Espacio mínimo para legibilidad */
+                letter-spacing: 0px; /* Espacio mínimo para legibilidad */
             }
             .candidate-photo img {
                 max-width: 160px;
@@ -355,6 +400,9 @@
                 font-size: 1.4em;
                 padding: 30px 15px;
             }
+            nav a {
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
@@ -364,6 +412,12 @@
         <h1>¡VOTA!</h1>
         <h2>SECRETARIO COMITÉ DE RELACIONES INTERINSTITUCIONALES</h2>
     </header>
+
+    <nav>
+        <a href="#trayectoria">Mi Trayectoria</a>
+        <a href="#vision">Mi Visión</a>
+        <a href="#compromiso">Mi Compromiso</a>
+    </nav>
 
     <div class="container">
         <section class="candidate-section">
@@ -376,17 +430,21 @@
             </div>
         </section>
 
-        <section class="info-sections">
+        <section id="trayectoria" class="info-sections">
             <h2 class="section-title">Mi Trayectoria y Formación</h2>
             <div class="content-block">
                 <p>Mi trayectoria profesional como <strong>Técnico Operativo en la Dirección de Desarrollo Organizacional</strong>, sumada a mi formación académica como <strong>estudiante de 10.º semestre de Administración Pública y 1.er semestre de Derecho</strong>, me otorgan una perspectiva integral y las herramientas necesarias para enfrentar los desafíos de nuestra asociación.</p>
             </div>
+        </section>
 
+        <section id="vision" class="info-sections">
             <h2 class="section-title">Mi Visión y Propósito Sindical</h2>
             <div class="content-block">
                 <p>Como aspirante a la Junta Directiva de nuestra asociación sindical, reafirmo mi profunda convicción en el propósito que nos convoca: consolidar a nuestra organización como el <strong>pilar fundamental para la promoción de los concursos de méritos</strong> y la <strong>defensa irrestricta de los derechos y la dignidad</strong> de todos los funcionarios de carrera administrativa.</p>
             </div>
+        </section>
 
+        <section id="compromiso" class="info-sections">
             <h2 class="section-title">Mi Compromiso y Llamada al Apoyo</h2>
             <div class="content-block">
                 <p>Tengo la certeza de que la verdadera transformación del paradigma sindical se forja en el ejercicio diario, a través de nuestra identidad y nuestras acciones. Por ello, pongo mi experiencia, mi dedicación y mi conocimiento a su entero servicio.</p>
