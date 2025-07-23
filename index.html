@@ -65,12 +65,12 @@
         }
 
         header h2 {
-            /* ESTOS SON LOS CAMBIOS PARA DARLE MÁS PROTAGONISMO */
-            font-size: 2.8em; /* ¡AÚN MÁS GRANDE! */
+            /* AJUSTES PARA EVITAR EL CORTE DE TEXTO Y MANTENER PROTAGONISMO */
+            font-size: 2.5em; /* Ligeramente más pequeño para mejor ajuste */
             margin: 15px 0 0; /* Más separación de H1 */
             font-weight: 900; /* ¡MUCHO MÁS NEGRITA! */
             text-transform: uppercase; /* Aseguramos mayúsculas */
-            letter-spacing: 1.5px; /* Más espacio entre letras */
+            letter-spacing: 0.8px; /* Reducción sutil del espacio entre letras */
             position: relative;
             z-index: 2;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
@@ -271,6 +271,11 @@
                 left: 50%;
                 transform: translateX(-50%); /* Centra la línea bajo el título */
             }
+            /* Ajuste específico para header h2 en pantallas medianas */
+            header h2 {
+                font-size: 2.2em;
+                letter-spacing: 0.5px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -278,8 +283,8 @@
                 font-size: 2.8em;
             }
             header h2 { /* Ajuste para móviles, sigue siendo protagonista pero escala */
-                font-size: 2em;
-                letter-spacing: 1px;
+                font-size: 1.8em; /* Más pequeño para que quepa bien */
+                letter-spacing: 0.2px; /* Reducción de espacio para el ajuste */
             }
             .candidate-section {
                 margin-top: -40px;
@@ -328,8 +333,8 @@
                 letter-spacing: 1px;
             }
             header h2 { /* Ajuste más pequeño para los móviles más pequeños */
-                font-size: 1.5em;
-                letter-spacing: 0.5px;
+                font-size: 1.3em; /* Para asegurar que quepa en casi cualquier móvil */
+                letter-spacing: 0.1px; /* Espacio mínimo para legibilidad */
             }
             .candidate-photo img {
                 max-width: 160px;
