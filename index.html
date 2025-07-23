@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javier Fernando Parra Prieto | Secretario Comité de Relaciones Interinstitucionales</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" href="images/sintra-merito.jpg" type="image/jpeg"> <meta name="description" content="Campaña de Javier Fernando Parra Prieto a Secretario del Comité de Relaciones Interinstitucionales. Por la defensa de derechos y concursos de méritos.">
     <meta name="keywords" content="Javier Fernando Parra Prieto, SINTRAMÉRITO, sindicato, concursos de méritos, derechos funcionarios, carrera administrativa, voto, elecciones sindicales">
     
@@ -54,23 +54,27 @@
         }
 
         header h1 {
-            font-size: 3.8em;
+            font-size: 3.8em; /* Más grande */
             margin: 0;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 3px; /* Más espacio entre letras */
             position: relative;
             z-index: 2;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para resaltar el texto */
         }
 
         header h2 {
-            font-size: 2em;
-            margin: 10px 0 0;
-            font-weight: 600;
+            /* ESTOS SON LOS CAMBIOS PARA DARLE MÁS PROTAGONISMO */
+            font-size: 2.8em; /* ¡AÚN MÁS GRANDE! */
+            margin: 15px 0 0; /* Más separación de H1 */
+            font-weight: 900; /* ¡MUCHO MÁS NEGRITA! */
+            text-transform: uppercase; /* Aseguramos mayúsculas */
+            letter-spacing: 1.5px; /* Más espacio entre letras */
             position: relative;
             z-index: 2;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            line-height: 1.2; /* Ajuste para que no quede muy pegado en varias líneas */
         }
 
         /* Logo de SINTRAMÉRITO como fondo en el encabezado */
@@ -273,8 +277,9 @@
             header h1 {
                 font-size: 2.8em;
             }
-            header h2 {
-                font-size: 1.5em;
+            header h2 { /* Ajuste para móviles, sigue siendo protagonista pero escala */
+                font-size: 2em;
+                letter-spacing: 1px;
             }
             .candidate-section {
                 margin-top: -40px;
@@ -322,8 +327,9 @@
                 font-size: 2.2em;
                 letter-spacing: 1px;
             }
-            header h2 {
-                font-size: 1.2em;
+            header h2 { /* Ajuste más pequeño para los móviles más pequeños */
+                font-size: 1.5em;
+                letter-spacing: 0.5px;
             }
             .candidate-photo img {
                 max-width: 160px;
