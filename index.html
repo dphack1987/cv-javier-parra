@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javier Fernando Parra Prieto | Secretario Comité de Relaciones Interinstitucionales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/sintra-merito.jpg" type="image/jpeg"> <meta name="description" content="Campaña de Javier Fernando Parra Prieto a Secretario del Comité de Relaciones Interinstitucionales. Por la defensa de derechos y concursos de méritos.">
+    <meta name="keywords" content="Javier Fernando Parra Prieto, SINTRAMÉRITO, sindicato, concursos de méritos, derechos funcionarios, carrera administrativa, voto, elecciones sindicales">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://[TU-URL-DE-VERCEL].vercel.app/"> <meta property="og:title" content="¡Vota Javier Fernando Parra Prieto! | Secretario Comité R. Interinstitucionales">
+    <meta property="og:description" content="Defensa de derechos, concursos de méritos y un sindicato más fuerte. Conoce la propuesta de Javier Fernando Parra Prieto.">
+    <meta property="og:image" content="https://[TU-URL-DE-VERCEL].vercel.app/images/foto-perfil.jpg"> <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://[TU-URL-DE-VERCEL].vercel.app/"> <meta property="twitter:title" content="¡Vota Javier Fernando Parra Prieto! | Secretario Comité R. Interinstitucionales">
+    <meta property="twitter:description" content="Defensa de derechos, concursos de méritos y un sindicato más fuerte. Conoce la propuesta de Javier Fernando Parra Prieto.">
+    <meta property="twitter:image" content="https://[TU-URL-DE-VERCEL].vercel.app/images/foto-perfil.jpg"> <style>
+        /* Variables de colores para fácil edición */
+        :root {
+            --color-primary-red: #E4002B; /* Rojo vibrante de SINTRAMÉRITO */
+            --color-secondary-dark: #333333; /* Texto principal oscuro */
+            --color-light-grey: #f4f4f4; /* Fondo claro */
+            --color-white: #ffffff;
+            --color-accent-blue: #007bff; /* Un azul sutil para detalles */
+        }
+
+        /* Estilos generales del cuerpo */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-light-grey);
+            color: var(--color-secondary-dark);
+            line-height: 1.6;
+            overflow-x: hidden; /* Evita scroll horizontal en dispositivos móviles */
+        }
+
+        /* Contenedor principal para centrar el contenido */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Estilos del encabezado */
+        header {
+            background-color: var(--color-primary-red);
+            color: var(--color-white);
+            padding: 40px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+        }
+
+        header h1 {
+            font-size: 3.8em;
+            margin: 0;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para resaltar el texto */
+        }
+
+        header h2 {
+            font-size: 2em;
+            margin: 10px 0 0;
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Logo de SINTRAMÉRITO como fondo en el encabezado */
+        .header-logo-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.1; /* Transparencia para efecto de fondo */
+            max-width: 90%;
+            height: auto;
+            z-index: 1;
+            filter: grayscale(100%) brightness(200%); /* Filtro para que se vea como marca de agua */
+        }
+
+        /* Sección del candidato (foto y presentación) */
+        .candidate-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 0;
+            background-color: var(--color-white);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 15px;
+            margin-top: -80px; /* Eleva la sección para superponerla al header */
+            position: relative;
+            z-index: 3;
+            animation: fadeIn 1s ease-out; /* Animación de entrada suave */
+        }
+
+        .candidate-photo {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .candidate-photo img {
+            max-width: 280px;
+            border-radius: 50%; /* Forma circular */
+            border: 8px solid var(--color-primary-red); /* Borde rojo llamativo */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            object-fit: cover; /* Ajusta la imagen dentro del círculo */
+            width: 280px;
+            height: 280px;
+            transition: transform 0.3s ease; /* Transición suave para el hover */
+        }
+        .candidate-photo img:hover {
+            transform: scale(1.05); /* Efecto de zoom ligero al pasar el mouse */
+        }
+
+        .candidate-info-text {
+            flex: 2;
+            min-width: 320px;
+            padding: 20px 40px;
+            text-align: left;
+        }
+
+        .candidate-info-text h3 {
+            color: var(--color-secondary-dark);
+            font-size: 2.2em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+        .candidate-info-text h3::after { /* Línea decorativa bajo el título */
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--color-primary-red);
+            border-radius: 2px;
+        }
+
+        .candidate-info-text strong {
+            color: var(--color-primary-red);
+            font-weight: 800;
+            font-size: 1.1em;
+        }
+        .candidate-info-text p {
+            font-size: 1.1em;
+            margin-bottom: 1em;
+        }
+
+        /* Títulos de sección principales */
+        .section-title {
+            color: var(--color-primary-red);
+            font-size: 2.8em;
+            font-weight: 800;
+            text-align: center;
+            margin: 80px 0 40px;
+            position: relative;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-title::after { /* Línea decorativa bajo el título de sección */
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background-color: var(--color-primary-red);
+            border-radius: 3px;
+        }
+
+        /* Bloques de contenido con información del candidato */
+        .content-block {
+            background-color: var(--color-white);
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para hover */
+        }
+        .content-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-block h4 { /* Si se usaran subtítulos dentro de los bloques */
+            color: var(--color-accent-blue);
+            font-size: 1.6em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .content-block p {
+            font-size: 1.1em;
+        }
+
+        /* Sección del eslogan final */
+        .slogan-section {
+            background-color: var(--color-primary-red);
+            color: var(--color-white);
+            padding: 60px 30px;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: 800;
+            border-radius: 15px;
+            margin-top: 60px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+            color: #666;
+            font-size: 1em;
+            background-color: var(--color-white);
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .footer-logo {
+            max-width: 180px;
+            margin-top: 20px;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Media Queries para Responsividad */
+        @media (max-width: 992px) {
+            .candidate-section {
+                flex-direction: column;
+                margin-top: -50px;
+            }
+            .candidate-photo {
+                padding-bottom: 10px;
+            }
+            .candidate-info-text {
+                padding-top: 10px;
+                text-align: center;
+            }
+            .candidate-info-text h3 {
+                text-align: center; /* Centra el título en pantallas pequeñas */
+            }
+            .candidate-info-text h3::after {
+                left: 50%;
+                transform: translateX(-50%); /* Centra la línea bajo el título */
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.8em;
+            }
+            header h2 {
+                font-size: 1.5em;
+            }
+            .candidate-section {
+                margin-top: -40px;
+                padding: 20px;
+                border-radius: 10px;
+            }
+            .candidate-photo img {
+                max-width: 220px;
+                width: 220px;
+                height: 220px;
+                border-width: 6px;
+            }
+            .candidate-info-text {
+                padding: 15px 20px;
+            }
+            .candidate-info-text h3 {
+                font-size: 1.8em;
+            }
+            .candidate-info-text p {
+                font-size: 1em;
+            }
+            .section-title {
+                font-size: 2.2em;
+                margin: 50px 0 30px;
+            }
+            .content-block {
+                padding: 25px 20px;
+            }
+            .slogan-section {
+                font-size: 1.8em;
+                padding: 40px 20px;
+                margin-top: 40px;
+                border-radius: 10px;
+            }
+            footer {
+                padding: 25px 0;
+            }
+            .footer-logo {
+                max-width: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2.2em;
+                letter-spacing: 1px;
+            }
+            header h2 {
+                font-size: 1.2em;
+            }
+            .candidate-photo img {
+                max-width: 160px;
+                width: 160px;
+                height: 160px;
+                border-width: 4px;
+            }
+            .candidate-info-text h3 {
+                font-size: 1.5em;
+            }
+            .section-title {
+                font-size: 1.8em;
+            }
+            .content-block {
+                padding: 15px;
+            }
+            .slogan-section {
+                font-size: 1.4em;
+                padding: 30px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/sintra-merito.jpg" alt="Logo SINTRAMÉRITO" class="header-logo-bg">
+        <h1>¡VOTA!</h1>
+        <h2>SECRETARIO COMITÉ DE RELACIONES INTERINSTITUCIONALES</h2>
+    </header>
+
+    <div class="container">
+        <section class="candidate-section">
+            <div class="candidate-photo">
+                <img src="images/foto-perfil.jpg" alt="Foto de Javier Fernando Parra Prieto">
+            </div>
+            <div class="candidate-info-text">
+                <h3>Conoce a tu Candidato:</h3>
+                <p>Con un compromiso inquebrantable con la gestión pública y la defensa sindical, me presento ante ustedes como <strong>Javier Fernando Parra Prieto</strong>, su candidato a Secretario del Comité de Relaciones Interinstitucionales.</p>
+            </div>
+        </section>
+
+        <section class="info-sections">
+            <h2 class="section-title">Mi Trayectoria y Formación</h2>
+            <div class="content-block">
+                <p>Mi trayectoria profesional como <strong>Técnico Operativo en la Dirección de Desarrollo Organizacional</strong>, sumada a mi formación académica como <strong>estudiante de 10.º semestre de Administración Pública y 1.er semestre de Derecho</strong>, me otorgan una perspectiva integral y las herramientas necesarias para enfrentar los desafíos de nuestra asociación.</p>
+            </div>
+
+            <h2 class="section-title">Mi Visión y Propósito Sindical</h2>
+            <div class="content-block">
+                <p>Como aspirante a la Junta Directiva de nuestra asociación sindical, reafirmo mi profunda convicción en el propósito que nos convoca: consolidar a nuestra organización como el <strong>pilar fundamental para la promoción de los concursos de méritos</strong> y la <strong>defensa irrestricta de los derechos y la dignidad</strong> de todos los funcionarios de carrera administrativa.</p>
+            </div>
+
+            <h2 class="section-title">Mi Compromiso y Llamada al Apoyo</h2>
+            <div class="content-block">
+                <p>Tengo la certeza de que la verdadera transformación del paradigma sindical se forja en el ejercicio diario, a través de nuestra identidad y nuestras acciones. Por ello, pongo mi experiencia, mi dedicación y mi conocimiento a su entero servicio.</p>
+                <p>Cuento con su valioso apoyo para edificar, de manera conjunta, un sindicato más fuerte, más representativo y eficaz para todos.</p>
+            </div>
+        </section>
+
+        <section class="slogan-section">
+            ¡Tu voto es clave para edificar un sindicato más fuerte y representativo!
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Campaña Javier Fernando Parra Prieto. Todos los derechos reservados.</p>
+        <img src="images/sintra-merito.jpg" alt="Logo SINTRAMÉRITO" class="footer-logo">
+    </footer>
+</body>
+</html>
